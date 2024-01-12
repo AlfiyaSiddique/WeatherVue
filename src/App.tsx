@@ -53,13 +53,13 @@ function App() {
             },
             (err) => {
               console.log(err);
-              url = `http://api.openweathermap.org/data/2.5/weather?q=Mumbai&appid=${api}&units=metric`;
+              url = `https://api.openweathermap.org/data/2.5/weather?q=Mumbai&appid=${api}&units=metric`;
               resolve();
             },
           );
         });
       } else {
-        url = `http://api.openweathermap.org/data/2.5/weather?q=Mumbai&appid=${api}&units=metric`;
+        url = `https://api.openweathermap.org/data/2.5/weather?q=Mumbai&appid=${api}&units=metric`;
       }
       return url;
     };
