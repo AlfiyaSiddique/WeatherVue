@@ -1,3 +1,5 @@
+
+// Country code and names
 const country: object = {
     "AF" : "Afghanistan",
     "AX" : "Åland Islands",

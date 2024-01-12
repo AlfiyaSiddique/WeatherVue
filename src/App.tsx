@@ -44,7 +44,6 @@ function App() {
     const getURL = async () => {
       let url = "";
       const api = import.meta.env.VITE_REACT_APP_API_KEY;
-      console.log(api);
       if (navigator.geolocation) {
         await new Promise<void>((resolve) => {
           navigator.geolocation.getCurrentPosition(
