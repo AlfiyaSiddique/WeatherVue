@@ -4,10 +4,17 @@
   box-sizing: border-box;
 }
 
+
+/* ID */
 #root {
   max-width: 1318px;
   margin: 0 auto;
   overflow-x: hidden;
-  padding: 2rem;
-  text-align: center;
+}
+
+#headbar{
+   background-image: url('../src/assets/Weather.jpg');
+   background-position: center center;
+   background-repeat: no-repeat;
+   background-size: cover;
 }
