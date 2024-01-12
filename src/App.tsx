@@ -74,7 +74,7 @@ function App() {
     <main>
       <div className="grid grid-cols-1 md:grid-cols-[75%_25%]">
         <LeftPannel weather={data} getData={getData} />
-        <Sidebar weather={data} className="hidde" />
+        <Sidebar weather={data} className="hidden md:block" />
       </div>
     </main>
   );
