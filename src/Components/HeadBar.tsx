@@ -43,7 +43,7 @@ const HeadBar: React.FC<{weather: WeatherDataInterface}> = ({weather}) => {
       <div className="flex justify-between">
         <span className="text-2xl">{getGreeting()}</span>
         <span className="border bg-[#6f7f8ac2] border-black p-1 rounded">
-          <FontAwesomeIcon icon={faLocationDot} className="mx-2"/>{weather.country}, {country[weather.country]}</span>
+          <FontAwesomeIcon icon={faLocationDot} className="mx-2"/>{weather.country}, {country.}</span>
       </div>
       <div className="mt-[4rem]"> 
         <div className="text-6xl">{hours}:{minutes} {ampm}</div>
