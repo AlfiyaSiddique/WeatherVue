@@ -1,3 +1,5 @@
+// Interfaces for objects
+
 export interface WeatherDataInterface {
     city: string ,
     description: string,

@@ -4,6 +4,8 @@ import country from "../common/countryname";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLocationDot } from "@fortawesome/free-solid-svg-icons/faLocationDot";
 
+
+// This is the top Head of the application
 const HeadBar: React.FC<{weather: WeatherDataInterface}> = ({weather}) => {
   const [time, setTime] = useState(new Date());
 

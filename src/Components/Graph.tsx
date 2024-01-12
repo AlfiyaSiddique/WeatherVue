@@ -1,3 +1,4 @@
+// This component draws graphs of temperature
 import React, { useEffect, useState } from "react";
 import { Line } from "react-chartjs-2";
 import axios from "axios";
@@ -23,21 +24,23 @@ import {
     Legend
   );
 
-
-const options = {
-    responsive: true,
-    plugins: {
-      legend: {
-        position: 'top' as const,
-      },
-      title: {
-        display: true,
-        text: 'Temperature Analysis',
-      },
-    },
-  };
-
 const Graph: React.FC<{city: string}>= ({city}) => {
+  
+  // Graph options
+const options = {
+  responsive: true,
+  plugins: {
+    legend: {
+      position: 'top' as const,
+    },
+    title: {
+      display: true,
+      text: `Temperature Analysis of ${city}`,
+    },
+  },
+};
+
+// Graph Data
   const [graphData, setGraphData] = useState<[GraphData] | []>([]);
   const api = import.meta.env.VITE_REACT_APP_API_KEY;
   
@@ -81,7 +84,7 @@ const Graph: React.FC<{city: string}>= ({city}) => {
     getURL()
   }, []);
   
-
+//  Graph patameters
   const chartData = {
     labels: graphData.map((entry) => entry.dt_txt.slice(0,10)),
     datasets: [
@@ -93,6 +96,8 @@ const Graph: React.FC<{city: string}>= ({city}) => {
       },
     ],
   };
+
+  // Graph
   return <div className="mx-auto w-[90%] bg-[whitesmoke] my-4 rounded-md">{graphData && <Line data={chartData} options={options}/>}</div>;
 };
 
